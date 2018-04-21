@@ -22,22 +22,19 @@ public class JeuOie
         initialiserCases();
 
         // jeu
-        int a=0;
-        while (a < 7)
+		int cpt = 0;
+        while( true )
         {
-            for(int i=0; i<4 ; i++)
-            {
-                joueurs[i].joue(cases);
-		afficherPlateau();
-            } 
-            a=a+1;
+            joueurs[cpt].joue();
+			cpt = (cpt + 1 )% nb_joueur;
+			//on regarde si la case 63 est occupé
+			if ( cases[63].EstOccupe()) 
+				//on quitte le while et le jeu se finit
+				{
+					System.out.println(" le gagnant est : " + cases[63].RetourneJoueur().Nom() + "!");  
+					break;
+				}	
         }
-       
-        /*while( !fini )
-        {
-            for(int i=0; i<joueurs.length ; i++)
-                joueurs[i].joue();
-        }*/
     }
     
     static void initialiserCases()

@@ -46,7 +46,7 @@ abstract public class Case
         return this.joueur;
     }
 
-    // place le joueur dans cette cellule
+    // place le joueur dans cette case
     public void PlaceJoueur(Joueur joueur)
     {
         this.joueur = joueur;
