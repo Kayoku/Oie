@@ -6,18 +6,19 @@ public class AllerCase extends Case
     protected int n;
 
     // constructeur de la case
-    public AllerCase(int iniIndex, int num)
+    public AllerCase(int initCase, int num)
     {
         // ce mot clé appelle le constructeur de la classe mère
-        super(iniIndex);
+        super(initCase);
 
         // ici on paramètre la case sur laquelle on va se rendre!
-	n = num;
+		n = num;
     }
-
+	//override permet réécrire sur la fonction effet existante.
     @Override
     public void effet(Case[] cases)
     {
-        System.out.println("Case Aller, on doit faire aller le joueur sur la case à la nouvelle case " + n);
+		cases[n].PlaceJoueur(this);
+		cases[initCase].PlaceJoueur(null);
     }
 }

@@ -55,7 +55,8 @@ abstract public class Case
     // laisse un tour se passer
     public void LaisserUnTour()
     {}
-
+	
+	// permet de visualiser le plateau du jeu pour une lecture plus claire lors de l'execution 
     public String afficherCase()
     {
 	String caseString;
@@ -63,8 +64,8 @@ abstract public class Case
 	    caseString = "   |";
 	else
         {
-           int numJoueur = joueur.Id(); 
-	   caseString = " "+numJoueur+" |";
+			int numJoueur = joueur.Id(); 
+			caseString = " "+numJoueur+" |";
         }
         return caseString;
     }
