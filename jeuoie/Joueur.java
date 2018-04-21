@@ -13,7 +13,7 @@ public class Joueur
     public Joueur (String nom, int id)
     {
         this.nom = nom;
-	this.id = id;
+    	this.id = id;
         this.casenow = 0;
     }
 
@@ -44,8 +44,8 @@ public class Joueur
         System.out.println(" Il lance le dé, et réalise un " +res + "!");  
         System.out.println(this.Nom() + " est maintenant en case " + d);
 
-	// On avance le joueur sur la prochaine case
-	this.casenow = d;
+    	// On avance le joueur sur la prochaine case
+    	this.casenow = d;
 
         // Si la case est déjà occupé, l'oie sur cette case va à mon ancienne case
 	// Sinon, mon ancienne case devient vide
