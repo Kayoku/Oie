@@ -50,24 +50,35 @@ public class Joueur
         // on affiche les différents paramètres déterminant le déroulement du jeu!
         System.out.print(this.Nom() + " est actuellement à la case " + c + ".");
         System.out.println(" Il lance le dé, et réalise un " +res + "!");  
+
+        int new_case = d;
+        int old = c;
+        // Tant que la nouvelle case, est différente de la courante
+        while (new_case != this.casenow)
+        {
+            // Si la case est déjà occupé, l'oie sur cette case va à mon ancienne case		
+		    if (cases[new_case].EstOccupe())
+		    	{
+		    		Joueur oie = cases[new_case].RetourneJoueur();
+                    System.out.println("On échange " + this.id + " et " + oie.Id() + "!"); 
+                    System.out.println(new_case + " " + this.casenow);
+		            cases[new_case].PlaceJoueur(this);
+		    		cases[c].PlaceJoueur(oie);
+                    if (c != old)
+                        cases[old].PlaceJoueur(null);
+		    	}
+		    // Sinon, mon ancienne case devient vide
+		    else
+		    	{
+		            cases[new_case].PlaceJoueur(this);
+		    		cases[old].PlaceJoueur(null);
+		    	}
+
+		    // On applique les effets de la case
+            old = new_case;
+		    new_case = cases[new_case].effet(cases);
+        }
+
         System.out.println(this.Nom() + " est maintenant en case " + d);
-
-        // Si la case est déjà occupé, l'oie sur cette case va à mon ancienne case		
-		if (cases[d].EstOccupe())
-			{
-				Joueur oie = cases[d].RetourneJoueur();
-                System.out.println("On échange " + this.id + " et " + oie.Id() + "!"); 
-		        cases[d].PlaceJoueur(this);
-				cases[c].PlaceJoueur(oie);
-			}
-		// Sinon, mon ancienne case devient vide
-		else
-			{
-		        cases[d].PlaceJoueur(this);
-				cases[c].PlaceJoueur(null);
-			}
-
-		// On applique les effets de la case
-		cases[d].effet(cases);
 	}
 }

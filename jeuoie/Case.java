@@ -72,5 +72,5 @@ abstract public class Case
         return caseString;
     }
 
-    abstract public void effet(Case[] cases);
+    abstract public int effet(Case[] cases);
 }

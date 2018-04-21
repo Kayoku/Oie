@@ -18,8 +18,9 @@ public class AttendreCase extends Case {
     }
 
     @Override
-    public void effet(Case[] cases)
+    public int effet(Case[] cases)
     {
         System.out.println("Case Attendre, le joueur passera son prochain tour");
+        return this.i;
     }
 }

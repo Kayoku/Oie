@@ -16,8 +16,9 @@ public class NormalCase extends Case
     }
 
     @Override
-    public void effet(Case[] cases)
+    public int effet(Case[] cases)
     {
         System.out.println("Case normal, il ne se passe rien");
+        return this.i;
     }
 }

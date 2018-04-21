@@ -24,8 +24,9 @@ public class AvanceCase extends Case
     }
 
     @Override
-    public void effet(Case[] cases)
+    public int effet(Case[] cases)
     {
         System.out.println("Case Avance, le joueur doit avancer jusqu'à la case " + nb);
+        return this.i + nb;
     }
 }

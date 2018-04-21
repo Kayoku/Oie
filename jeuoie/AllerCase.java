@@ -14,12 +14,12 @@ public class AllerCase extends Case
         // ici on paramètre la case sur laquelle on va se rendre!
 		n = num;
     }
+
 	//override permet réécrire sur la fonction effet existante.
     @Override
-    public void effet(Case[] cases)
+    public int effet(Case[] cases)
     {
-		cases[n].PlaceJoueur(cases[this.i].RetourneJoueur());
-		cases[this.i].PlaceJoueur(null);
         System.out.println("Aller case");
+        return n;
     }
 }

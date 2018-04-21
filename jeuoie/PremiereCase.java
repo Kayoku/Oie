@@ -31,9 +31,10 @@ public class PremiereCase extends Case
     }
 
     @Override
-    public void effet(Case[] cases)
+    public int effet(Case[] cases)
     {
         System.out.println("Case de début, il ne se passe rien");
+        return this.i;
     }
 
     @Override
