@@ -19,7 +19,7 @@ public class AllerCase extends Case
     @Override
     public int effet(Case[] cases)
     {
-        System.out.println("Aller case");
+        System.out.println("Aller case, le joueur va à la case " + n);
         return n;
     }
 }
