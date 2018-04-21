@@ -13,10 +13,10 @@ public class JeuOie
         joueurs = new Joueur[nb_joueur]; 
 
         // constructeur en précisant l'indice de la case
-        joueurs[0] = new Joueur("José", 0);
-        joueurs[1] = new Joueur("Maurice", 1);
-        joueurs[2] = new Joueur("Loulou", 2);
-        joueurs[3] = new Joueur("Jacquie", 3);
+        joueurs[0] = new Joueur("John", 0);
+        joueurs[1] = new Joueur("Paul", 1);
+        joueurs[2] = new Joueur("George", 2);
+        joueurs[3] = new Joueur("Ringo", 3);
 
         // initialisation des cases
         initialiserCases();
@@ -63,14 +63,16 @@ public class JeuOie
         cases[56] = new AvanceCase(56);
         
         // case aller a une case précise
-        cases[1] = new AllerCase(1,12);
-        cases[27] = new AllerCase(27,35);
+        cases[6] = new AllerCase(6,12);
+        cases[42] = new AllerCase(42,30);
     };
 
     static void afficherPlateau()
     {
     	for (int i = 0 ; i < cases.length ; i++)
+		{
     	    System.out.print(cases[i].afficherCase());
-    	System.out.println();
+		}
+		System.out.println();
     }
 }
