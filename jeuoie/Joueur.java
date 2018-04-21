@@ -43,13 +43,13 @@ public class Joueur
     {
         if( !cases[this.casenow].PeutEtreQuitte())
 		{
-			System.out.println(this.nom + "est bloqué il doit attendre que quelqu'un prenne sa place"); 
+			System.out.println(this.nom + " est bloqué il doit attendre que quelqu'un prenne sa place"); 
 			return ;
 		}
 		if ( this.bloque > 0)
 		{
 			this.bloque --;
-			System.out.println(this.nom + "est bloqué il doit attendre "+ this.bloque+"tours"); 
+			System.out.println(this.nom + " est bloqué il doit attendre "+ this.bloque +" tours"); 
 			return;
 		}
 		int res = this.tirageDe();                 // on tire le dé!

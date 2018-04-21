@@ -54,14 +54,12 @@ public class JeuOie
         
 		//case bloquante
 		cases[31] = new BloqueCase(31);
+		cases[52] = new BloqueCase(52);
         
         // case aller a une case précise
         cases[6] = new AllerCase(6,12);
-		System.out.println("il y a un pont, aller à la 12.");
         cases[42] = new AllerCase(42,30);
-		System.out.println("il y a un labyrinthe retourne aller à la 30");
 		cases[58] = new AllerCase(58,0);
-		System.out.println("vous etes mort ! :( retour à la case départ");
     };
 
     static void afficherPlateau()
