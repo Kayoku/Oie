@@ -49,22 +49,19 @@ public class JeuOie
         // Première case
     	cases[0] = new PremiereCase(0, joueurs);
 
-        // case attendre un tour
-        cases[17] = new AttendreCase(17);
-        cases[24] = new AttendreCase(24);
+        // case attendre deux tours
+        cases[19] = new AttendreCase(19);
         
-        // cases reculer de k cases
-        cases[29] = new ReculeCase(29);
-        cases[50] = new ReculeCase(50);
-        
-        // cases avancer de k cases
-        cases[4] = new AvanceCase(4);
-        cases[40] = new AvanceCase(40);
-        cases[56] = new AvanceCase(56);
+		//case bloquante
+		cases[31] = new BloqueCase(31);
         
         // case aller a une case précise
         cases[6] = new AllerCase(6,12);
+		System.out.println("il y a un pont, aller à la 12.");
         cases[42] = new AllerCase(42,30);
+		System.out.println("il y a un labyrinthe retourne aller à la 30");
+		cases[58] = new AllerCase(58,0);
+		System.out.println("vous etes mort ! :( retour à la case départ");
     };
 
     static void afficherPlateau()

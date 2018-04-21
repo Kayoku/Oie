@@ -7,6 +7,7 @@ public class Joueur
     protected int casenow;
     protected String nom;
     protected int id;
+	protected int bloque = 0;
 
     // On peut utiliser 2 constructeurs différents
     // Ici on nomme le joueur et on lui attribut une case de départ
@@ -26,6 +27,8 @@ public class Joueur
     // retourner la case du joueur
     public int CaseNow() { return casenow; }
     
+	//met bloque à 2 
+	public void dormir() { this.bloque=2; }
     // méthode tirageDe qui retourne une valeur entre 1 et 6
     public int tirageDe() 
     { 
@@ -38,7 +41,18 @@ public class Joueur
     // méthode joue qui permet de faire joueur le joueur
     public void joue(Case[] cases)
     {
-        int res = this.tirageDe();                 // on tire le dé!
+        if( !cases[this.casenow].PeutEtreQuitte())
+		{
+			System.out.println(this.nom + "est bloqué il doit attendre que quelqu'un prenne sa place"); 
+			return ;
+		}
+		if ( this.bloque > 0)
+		{
+			this.bloque --;
+			System.out.println(this.nom + "est bloqué il doit attendre "+ this.bloque+"tours"); 
+			return;
+		}
+		int res = this.tirageDe();                 // on tire le dé!
         int c = this.casenow;                      // ici on récupére le numero de la case actuelle du joueur
         int d = res+c;                             // on récupére le numero de la nouvelle case aprés lancement du dé
         // si le joueur depasse la case 63, il devra reculer d’autant de cases supplémentaires
