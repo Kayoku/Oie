@@ -47,9 +47,11 @@ abstract public class Case
     }
 
     // place le joueur dans cette case
-    public void PlaceJoueur(Joueur joueur)
+    public void PlaceJoueur(Joueur j)
     {
-        this.joueur = joueur;
+        if (j != null)
+            j.placeCase(this.i);
+        this.joueur = j;
     }
 
     // laisse un tour se passer

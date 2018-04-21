@@ -31,6 +31,9 @@ public class Joueur
     { 
         return ((int) (Math.random()*10000) % 6)+1; 
     }
+
+    // méthode qui pemet de mettre une nouvelle case au joueur
+    public void placeCase(int new_case) { this.casenow = new_case; } 
     
     // méthode joue qui permet de faire joueur le joueur
     public void joue(Case[] cases)
@@ -49,23 +52,20 @@ public class Joueur
         System.out.println(" Il lance le dé, et réalise un " +res + "!");  
         System.out.println(this.Nom() + " est maintenant en case " + d);
 
-    	// On avance le joueur sur la prochaine case
-    	this.casenow = d;
-
         // Si la case est déjà occupé, l'oie sur cette case va à mon ancienne case		
 		if (cases[d].EstOccupe())
 			{
 				Joueur oie = cases[d].RetourneJoueur();
-				cases[oie.CaseNow()].PlaceJoueur(null);
+                System.out.println("On échange " + this.id + " et " + oie.Id() + "!"); 
+		        cases[d].PlaceJoueur(this);
 				cases[c].PlaceJoueur(oie);
 			}
+		// Sinon, mon ancienne case devient vide
 		else
 			{
-				// Sinon, mon ancienne case devient vide
+		        cases[d].PlaceJoueur(this);
 				cases[c].PlaceJoueur(null);
 			}
-		// On actualise les nouveaux paramètres du joueurs
-		cases[d].PlaceJoueur(this);
 
 		// On applique les effets de la case
 		cases[d].effet(cases);

@@ -47,7 +47,7 @@ public class JeuOie
             cases[i] = new NormalCase(i);
 
         // Première case
-    	cases[0] = new PremiereCase(0);
+    	cases[0] = new PremiereCase(0, joueurs);
 
         // case attendre un tour
         cases[17] = new AttendreCase(17);
