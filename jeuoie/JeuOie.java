@@ -46,7 +46,7 @@ public class JeuOie
             cases[i] = new NormalCase(i);
 
         // Première case
-	cases[0] = new PremiereCase(0);
+    	cases[0] = new PremiereCase(0);
 
         // case attendre un tour
         cases[17] = new AttendreCase(17);
@@ -68,8 +68,8 @@ public class JeuOie
 
     static void afficherPlateau()
     {
-	for (int i = 0 ; i < cases.length ; i++)
-	    System.out.print(cases[i].afficherCase());
-	System.out.println();
+    	for (int i = 0 ; i < cases.length ; i++)
+    	    System.out.print(cases[i].afficherCase());
+    	System.out.println();
     }
 }
