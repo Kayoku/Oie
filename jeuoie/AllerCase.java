@@ -16,7 +16,7 @@ public class AllerCase extends Case
     }
 
     @Override
-    public void effet()
+    public void effet(Case[] cases)
     {
         System.out.println("Case Aller, on doit faire aller le joueur sur la case à la nouvelle case " + n);
     }

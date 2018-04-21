@@ -24,7 +24,7 @@ public class ReculeCase extends Case
     }
 
     @Override
-    public void effet()
+    public void effet(Case[] cases)
     {
         System.out.println("Case Recule, le joueur va reculer de " + nb + " cases!");
     }

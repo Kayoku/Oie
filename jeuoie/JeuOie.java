@@ -25,7 +25,7 @@ public class JeuOie
 		int cpt = 0;
         while( true )
         {
-            joueurs[cpt].joue();
+            joueurs[cpt].joue(cases);
 			cpt = (cpt + 1 )% nb_joueur;
 			//on regarde si la case 63 est occupé
 			if ( cases[63].EstOccupe()) 

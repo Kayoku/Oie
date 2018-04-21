@@ -68,6 +68,6 @@ public class Joueur
 		cases[d].PlaceJoueur(this);
 
 		// On applique les effets de la case
-		cases[d].effet();
+		cases[d].effet(cases);
 	}
 }
