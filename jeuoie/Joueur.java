@@ -38,7 +38,12 @@ public class Joueur
         int res = this.tirageDe();                 // on tire le dé!
         int c = this.casenow;                      // ici on récupére le numero de la case actuelle du joueur
         int d = res+c;                             // on récupére le numero de la nouvelle case aprés lancement du dé
-        
+        // si le joueur depasse la case 63, il devra reculer d’autant de cases supplémentaires
+		if ( d > 63)
+		{
+			d = 63 -(d-63);
+		}
+		
         // on affiche les différents paramètres déterminant le déroulement du jeu!
         System.out.print(this.Nom() + " est actuellement à la case " + c + ".");
         System.out.println(" Il lance le dé, et réalise un " +res + "!");  
