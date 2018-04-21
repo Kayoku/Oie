@@ -18,7 +18,8 @@ public class AllerCase extends Case
     @Override
     public void effet(Case[] cases)
     {
-		cases[n].PlaceJoueur(this);
-		cases[initCase].PlaceJoueur(null);
+		cases[n].PlaceJoueur(cases[this.i].RetourneJoueur());
+		cases[this.i].PlaceJoueur(null);
+        System.out.println("Aller case");
     }
 }
