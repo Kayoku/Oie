@@ -15,6 +15,7 @@ public class PremiereCase extends Case
             joueurs.add(js[i]);
     }
 
+	//override permet réécrire sur la fonction effet existante.
     @Override
     public void PlaceJoueur(Joueur joueur)
     {
@@ -30,6 +31,7 @@ public class PremiereCase extends Case
                 joueurs.remove(i);
     }
 
+	//override permet réécrire sur la fonction effet existante.
     @Override
     public int effet(Case[] cases)
     {
@@ -37,6 +39,7 @@ public class PremiereCase extends Case
         return this.i;
     }
 
+	//override permet réécrire sur la fonction effet existante.
     @Override
     public String afficherCase()
     {

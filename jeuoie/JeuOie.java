@@ -38,6 +38,7 @@ public class JeuOie
         }
     }
     
+	//permet d'initialiser toutes les cases avec leurs spécificités 
     static void initialiserCases()
     {
         cases = new Case[64];
@@ -62,6 +63,7 @@ public class JeuOie
 		cases[58] = new AllerCase(58,0);
     };
 
+	// on affiche le plateau
     static void afficherPlateau()
     {
     	for (int i = 0 ; i < cases.length ; i++)

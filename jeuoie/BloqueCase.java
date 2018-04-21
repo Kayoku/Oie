@@ -10,6 +10,7 @@ public class BloqueCase extends Case
 
     }
 	
+	//override permet réécrire sur la fonction effet existante.
 	@Override
 	public boolean PeutEtreQuitte()
     {
@@ -19,11 +20,7 @@ public class BloqueCase extends Case
     @Override
     public int effet(Case[] cases)
     {
-        System.out.println("Bloque case");
+        System.out.println("Bloque case, il doit attendre que quelqu'un le releves");
         return this.i;
     }
-	
-	
-	
-	
 }

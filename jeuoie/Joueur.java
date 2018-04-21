@@ -77,6 +77,7 @@ public class Joueur
                     System.out.println("On échange " + this.id + " et " + oie.Id() + "!"); 
 		            cases[new_case].PlaceJoueur(this);
 		    		cases[c].PlaceJoueur(oie);
+					//ici on gere les cas particuliers où un joueur enchaine plusieurs cases effets
                     if (c != old)
                         cases[old].PlaceJoueur(null);
 		    	}

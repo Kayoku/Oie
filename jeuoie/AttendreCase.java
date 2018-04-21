@@ -10,7 +10,8 @@ public class AttendreCase extends Case {
         super(iniIndex);
         nb = 2;
     }
-
+	
+	//override permet réécrire sur la fonction effet existante.
     @Override
     public int effet(Case[] cases)
     {
