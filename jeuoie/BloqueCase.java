@@ -20,7 +20,7 @@ public class BloqueCase extends Case
     public int effet(Case[] cases)
     {
         System.out.println("Bloque case");
-        return n;
+        return this.i;
     }
 	
 	
