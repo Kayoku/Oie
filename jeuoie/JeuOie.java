@@ -26,6 +26,7 @@ public class JeuOie
         while( true )
         {
             joueurs[cpt].joue(cases);
+            afficherPlateau();
 			cpt = (cpt + 1 )% nb_joueur;
 			//on regarde si la case 63 est occupé
 			if ( cases[63].EstOccupe()) 
