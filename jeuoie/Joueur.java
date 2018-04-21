@@ -61,7 +61,6 @@ public class Joueur
 		    	{
 		    		Joueur oie = cases[new_case].RetourneJoueur();
                     System.out.println("On échange " + this.id + " et " + oie.Id() + "!"); 
-                    System.out.println(new_case + " " + this.casenow);
 		            cases[new_case].PlaceJoueur(this);
 		    		cases[c].PlaceJoueur(oie);
                     if (c != old)
